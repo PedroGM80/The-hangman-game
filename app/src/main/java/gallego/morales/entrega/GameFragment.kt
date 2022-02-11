@@ -16,12 +16,10 @@ class GameFragment : Fragment() {
     private lateinit var binding: GameFragmentBinding
     private lateinit var viewModel: GameViewModel
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         // Inflate view and obtain an instance of the binding class
         binding = DataBindingUtil.inflate(
             inflater,
@@ -29,23 +27,13 @@ class GameFragment : Fragment() {
             container,
             false
         )
-
-        // Get the viewmodel
-        viewModel = ViewModelProvider(this).get(GameViewModel::class.java)
-
-        // Set the viewmodel for databinding - this allows the bound layout access to all of the
-        // data in the VieWModel
-        binding.gameViewModel = viewModel
-
-        /** Setting up LiveData observation relationship **/
+        viewModel = ViewModelProvider(this)[GameViewModel::class.java]
         viewModel.word_show.observe(viewLifecycleOwner, Observer { newWord ->
             binding.palabraOculta.text = newWord
         })
-
         viewModel.live_draw.observe(viewLifecycleOwner, Observer { changeImage ->
             binding.imagenJugador.setImageResource(changeImage)
         })
-
         viewModel.status_game.observe(viewLifecycleOwner, Observer { estadoPartida ->
             var status = estadoPartida
             if (status == "ganaste") {
@@ -54,12 +42,10 @@ class GameFragment : Fragment() {
             if (status == "perdiste") {
                 findNavController().navigate(R.id.action_gameFragment_to_loseFragment)
             }
-
         })
-
-
+        binding.lifecycleOwner = this
+        binding.gameViewModel = viewModel
         return binding.root
-
     }
 
 }

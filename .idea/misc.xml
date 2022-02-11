@@ -9,8 +9,11 @@
         <entry key="..\:/Users/pedro/AndroidStudioProjects/entrega2/app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
         <entry key="..\:/Users/pedro/AndroidStudioProjects/entrega2/app/src/main/res/layout/fragment_home.xml" value="0.1" />
         <entry key="..\:/Users/pedro/AndroidStudioProjects/entrega2/app/src/main/res/layout/fragment_lose.xml" value="0.1" />
+        <entry key="..\:/Users/pedro/AndroidStudioProjects/entrega2/app/src/main/res/layout/fragment_overview.xml" value="0.1" />
         <entry key="..\:/Users/pedro/AndroidStudioProjects/entrega2/app/src/main/res/layout/fragment_win.xml" value="0.2210144927536232" />
-        <entry key="..\:/Users/pedro/AndroidStudioProjects/entrega2/app/src/main/res/layout/game_fragment.xml" value="0.1" />
+        <entry key="..\:/Users/pedro/AndroidStudioProjects/entrega2/app/src/main/res/layout/game_fragment.xml" value="0.2" />
+        <entry key="..\:/Users/pedro/AndroidStudioProjects/entrega2/app/src/main/res/layout/nav_header_main.xml" value="0.1" />
+        <entry key="..\:/Users/pedro/AndroidStudioProjects/entrega2/app/src/main/res/layout/other_activity_main.xml" value="0.1" />
       </map>
     </option>
   </component>

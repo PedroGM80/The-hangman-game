@@ -13,6 +13,8 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="play">Play</string>
     <string name="image_hangman_title">image hangman title</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="deme_una_letra">Deme una letra:</string>
+    <string name="intento">intento</string>
+    <string name="todo">TODO</string>
 </resources>
