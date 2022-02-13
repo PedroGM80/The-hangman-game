@@ -35,7 +35,7 @@
             android:layout_marginEnd="101dp"
             android:layout_marginBottom="26dp"
             android:onClick="replayLost"
-            android:text="/volver_a_jugar"
+            android:text="volver a jugar"
             app:cornerRadius="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

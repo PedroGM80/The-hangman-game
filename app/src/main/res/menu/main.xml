@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/action_settings"
+        android:icon="@drawable/img_1"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Compartir"
+        android:onClick="compartir"
         app:showAsAction="never" />
 </menu>

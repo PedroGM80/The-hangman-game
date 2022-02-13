@@ -1,8 +1,10 @@
 package gallego.morales.entrega
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
+import android.view.MenuItem
 import android.view.View
 import android.widget.ArrayAdapter
 import android.widget.ListView
@@ -23,6 +25,7 @@ import gallego.morales.entrega.ui.home.HomeFragment.Companion.nombre
 import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+
 
 var allPark: MutableList<Record>? = null
 
@@ -113,6 +116,15 @@ class MainActivity : AppCompatActivity() {
         GlobalScope.launch {
             AppDatabase.getDatabase(applicationContext).recordDao().insertAll(saveGame)
         }
+    }
+
+    fun compartir(item: MenuItem) {
+        val sendIntent = Intent()
+        sendIntent.action = Intent.ACTION_SEND
+        sendIntent.putExtra(Intent.EXTRA_TEXT, nombre+"Aciertos: "+ ok+ " Fallos:  "+ fail)
+        sendIntent.type = "text/plain"
+        val shareIntent = Intent.createChooser(sendIntent , null)
+        startActivity(shareIntent)
     }
 
 }
