@@ -7,35 +7,44 @@
     android:layout_margin="5dp"
     tools:context=".ui.home.HomeFragment">
 
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text=""
+        app:layout_constraintBottom_toBottomOf="@+id/playGameButton"
+        app:layout_constraintEnd_toStartOf="@+id/playGameButton"
+        app:layout_constraintTop_toTopOf="@+id/playGameButton"
+        app:layout_constraintVertical_bias="0.541" />
+
     <Button
         android:id="@+id/playGameButton"
-        android:layout_width="182dp"
+        android:layout_width="wrap_content"
         android:layout_height="72dp"
-        android:layout_marginStart="158dp"
-        android:layout_marginEnd="159dp"
+        android:layout_marginStart="260dp"
         android:layout_marginBottom="4dp"
         android:text="@string/play"
+        app:cornerRadius="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.608"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="332dp"
-        android:layout_height="89dp"
-        android:layout_marginStart="38dp"
+        android:layout_width="319dp"
+        android:layout_height="96dp"
         android:layout_marginTop="51dp"
-        android:layout_marginEnd="31dp"
         android:layout_marginBottom="383dp"
         android:contentDescription="@string/image_hangman_title"
         android:src="@drawable/titulo"
         app:layout_constraintBottom_toTopOf="@+id/playGameButton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageView
         android:id="@+id/imageView3"
@@ -51,4 +60,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:layout_constraintVertical_bias="0.446" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="59dp"
+        android:layout_height="40dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="28dp"
+        android:gravity="center"
+        android:text="Nombre: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintHorizontal_bias="0.88"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

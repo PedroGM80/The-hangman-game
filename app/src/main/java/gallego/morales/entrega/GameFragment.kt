@@ -15,7 +15,10 @@ class GameFragment : Fragment() {
 
     private lateinit var binding: GameFragmentBinding
     private lateinit var viewModel: GameViewModel
-
+    companion object{
+        var ok =0
+        var fail=0
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?

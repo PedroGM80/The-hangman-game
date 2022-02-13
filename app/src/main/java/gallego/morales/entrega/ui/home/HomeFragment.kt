@@ -14,7 +14,9 @@ class HomeFragment : Fragment() {
 
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
-
+companion object{
+    var nombre =""
+}
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -24,6 +26,7 @@ class HomeFragment : Fragment() {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
         binding.playGameButton.setOnClickListener {
+             nombre=binding.editTextTextPersonName.text.toString()
             findNavController().navigate(R.id.action_nav_home_to_gameFragment)
         }
         return root

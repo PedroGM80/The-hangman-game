@@ -1,7 +1,4 @@
-package com.example.android.marsrealestate.network
-
-import gallego.morales.entrega.DataApiService
-import gallego.morales.entrega.retrofit
+package gallego.morales.entrega
 
 object MyObject {
     val retrofitService: DataApiService by lazy { retrofit.create(DataApiService::class.java) }

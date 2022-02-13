@@ -1,14 +1,17 @@
 package gallego.morales.entrega
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.android.marsrealestate.network.MyObject
+import gallego.morales.entrega.GameFragment.Companion.fail
+import gallego.morales.entrega.GameFragment.Companion.ok
 import gallego.morales.entrega.databinding.GameFragmentBinding
 import kotlinx.coroutines.launch
 
 class GameViewModel : ViewModel() {
+
     val entrada_letra = MutableLiveData<String>()
     private val _entrada_game: LiveData<String>
         get() = _entrada_game
@@ -34,11 +37,7 @@ class GameViewModel : ViewModel() {
     val texto: LiveData<String>
         get() = _texto
 
-    init {
-        getMarsRealEstateProperties()
-    }
-
-    private fun getMarsRealEstateProperties() {
+    private fun getEstateProperties() {
         viewModelScope.launch {
             try {
                 val listResult = MyObject.retrofitService.getProperties()
@@ -47,6 +46,7 @@ class GameViewModel : ViewModel() {
                     _property.value = listResult.random()
                     _texto.value = property.value.toString()
                     _word_secret.value = _texto.value
+                    Log.i("Palabra oculta:::", _word_secret.value.toString())
                     _word_show.value = replaceLetter(_word_secret.value.toString())
                 }
             } catch (e: Exception) {
@@ -91,7 +91,7 @@ class GameViewModel : ViewModel() {
     private var charsExist = ArrayList<Char>()//list of characters representing attempts
 
     init {
-        getMarsRealEstateProperties()
+        getEstateProperties()
         _lives.value = 0
         _countOk.value = 0
         _live_draw.value = listDraw[0]
@@ -104,10 +104,12 @@ class GameViewModel : ViewModel() {
         if (!chars.contains(myChar.uppercaseChar()) && !chars.contains(myChar.lowercaseChar())) {
             _lives.value = (_lives.value)?.plus(1)
             _live_draw.value = listDraw[_lives.value?.toInt()!!]
+            fail+=1
         } else {
             if (!charsExist.contains(myChar)) {
                 charsExist.add(myChar)
                 _countOk.value = (_countOk.value)?.plus(1)
+                ok+=1
             }
         }
         for (i in chars.indices) {
@@ -122,7 +124,6 @@ class GameViewModel : ViewModel() {
 
     fun intento() {
         val letter = entrada_letra.value.toString()[0]
-        print(letter)
         val result: String = replaceCheckLetter(_word_secret.value.toString(), letter)
         _word_show.value = result
         _live_draw.value = listDraw[_lives.value?.toInt()!!]
