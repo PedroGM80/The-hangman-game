@@ -14,4 +14,9 @@
     <string name="deme_una_letra">Deme una letra:</string>
     <string name="intento">intento</string>
     <string name="todo">TODO</string>
+    <string name="informaci_n">Información</string>
+    <string name="applink">GitHub
+<a href="https://github.com/PedroGM80/entrega.git">Get it here</a>
+</string>
+    <string name="textoexplicativo">Es el juego de la ahorcado de tendrás que adivinar la palabra que corresponde a películas de cine generador de de forma aleatoria a partir del retrofit además almacena en una base de datos lo recordé los usuarios que han ganado .</string>
 </resources>
