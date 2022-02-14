@@ -26,7 +26,7 @@ data class Record(
     @ColumnInfo(name = "ok") val ok: Int,
     @ColumnInfo(name = "fail") val fail: Int) {
     override fun toString(): String {
-        return " $name', Aciertos $ok, Fallos $fail)"
+        return " $name , Aciertos $ok, Fallos $fail"
     }
 
 
