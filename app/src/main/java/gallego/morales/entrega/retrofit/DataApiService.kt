@@ -1,4 +1,4 @@
-package gallego.morales.entrega
+package gallego.morales.entrega.retrofit
 
 import retrofit2.http.GET
 

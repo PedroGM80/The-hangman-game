@@ -7,14 +7,14 @@
 
         <variable
             name="gameViewModel"
-            type="gallego.morales.entrega.GameViewModel" />
+            type="gallego.morales.entrega.game.GameViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
-        tools:context=".GameFragment">
+        tools:context=".game.GameFragment">
 
         <TextView
             android:id="@+id/palabraOculta"

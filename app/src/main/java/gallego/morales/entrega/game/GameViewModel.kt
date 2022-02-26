@@ -1,13 +1,16 @@
-package gallego.morales.entrega
+package gallego.morales.entrega.game
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import gallego.morales.entrega.GameFragment.Companion.fail
-import gallego.morales.entrega.GameFragment.Companion.ok
+import gallego.morales.entrega.R
+import gallego.morales.entrega.game.GameFragment.Companion.fail
+import gallego.morales.entrega.game.GameFragment.Companion.ok
 import gallego.morales.entrega.databinding.GameFragmentBinding
+import gallego.morales.entrega.retrofit.MyObject
+import gallego.morales.entrega.retrofit.MyProperty
 import kotlinx.coroutines.launch
 
 class GameViewModel : ViewModel() {

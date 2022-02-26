@@ -1,4 +1,4 @@
-package gallego.morales.entrega
+package gallego.morales.entrega.game
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import gallego.morales.entrega.R
 import gallego.morales.entrega.databinding.GameFragmentBinding
 
 class GameFragment : Fragment() {

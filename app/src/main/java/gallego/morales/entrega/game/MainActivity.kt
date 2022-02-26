@@ -1,4 +1,4 @@
-package gallego.morales.entrega
+package gallego.morales.entrega.game
 
 import android.content.Intent
 import android.os.Bundle
@@ -16,8 +16,9 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.navigation.NavigationView
-import gallego.morales.entrega.GameFragment.Companion.fail
-import gallego.morales.entrega.GameFragment.Companion.ok
+import gallego.morales.entrega.R
+import gallego.morales.entrega.game.GameFragment.Companion.fail
+import gallego.morales.entrega.game.GameFragment.Companion.ok
 import gallego.morales.entrega.databinding.ActivityMainBinding
 import gallego.morales.entrega.db.AppDatabase
 import gallego.morales.entrega.db.Record
@@ -47,7 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         appBarConfiguration = AppBarConfiguration(
             setOf(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow
+                R.id.nav_home
             ), drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)

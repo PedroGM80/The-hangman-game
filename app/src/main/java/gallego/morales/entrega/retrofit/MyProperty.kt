@@ -1,4 +1,4 @@
-package gallego.morales.entrega
+package gallego.morales.entrega.retrofit
 data class MyProperty(
     val id: String,
     val title: String

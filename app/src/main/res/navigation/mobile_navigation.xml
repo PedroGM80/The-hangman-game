@@ -16,19 +16,8 @@
     </fragment>
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="gallego.morales.entrega.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
-
-    <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="gallego.morales.entrega.ui.slideshow.SlideshowFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-    <fragment
         android:id="@+id/gameFragment"
-        android:name="gallego.morales.entrega.GameFragment"
+        android:name="gallego.morales.entrega.game.GameFragment"
         android:label="game_fragment"
         tools:layout="@layout/game_fragment">
         <action
@@ -40,7 +29,7 @@
     </fragment>
     <fragment
         android:id="@+id/winFragment"
-        android:name="gallego.morales.entrega.WinFragment"
+        android:name="gallego.morales.entrega.game.WinFragment"
         android:label="fragment_win"
         tools:layout="@layout/fragment_win" >
         <action
@@ -52,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/loseFragment"
-        android:name="gallego.morales.entrega.LoseFragment"
+        android:name="gallego.morales.entrega.game.LoseFragment"
         android:label="fragment_lose"
         tools:layout="@layout/fragment_lose" >
         <action
@@ -61,7 +50,12 @@
     </fragment>
     <fragment
         android:id="@+id/recordsFragment"
-        android:name="gallego.morales.entrega.RecordsFragment"
+        android:name="gallego.morales.entrega.game.RecordsFragment"
         android:label="fragment_records"
         tools:layout="@layout/fragment_records" />
+    <fragment
+        android:id="@+id/infoFragment"
+        android:name="gallego.morales.entrega.game.InfoFragment"
+        android:label="fragment_info"
+        tools:layout="@layout/fragment_info" />
 </navigation>

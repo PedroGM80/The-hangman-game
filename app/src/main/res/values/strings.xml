@@ -6,6 +6,7 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="fragment_lose">Vuelve a jugar</string>
+    <string name="fragment_info">Información del juego</string>
     <string name="menu_home">Bienvenido al ahorcado</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -19,4 +20,6 @@
 <a href="https://github.com/PedroGM80/entrega.git">Get it here</a>
 </string>
     <string name="textoexplicativo">Es el juego de la ahorcado de tendrás que adivinar la palabra que corresponde a películas de cine generador de de forma aleatoria a partir del retrofit además almacena en una base de datos lo recordé los usuarios que han ganado .</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
