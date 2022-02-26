@@ -28,7 +28,7 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 
 
-var allPark: MutableList<Record>? = null
+var allRecords: MutableList<Record>? = null
 
 class MainActivity : AppCompatActivity() {
 
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
         GlobalScope.launch {
-            allPark = AppDatabase.getDatabase(applicationContext).recordDao().getAll()
+            allRecords = AppDatabase.getDatabase(applicationContext).recordDao().getAll()
         }
     }
 
@@ -72,26 +72,26 @@ class MainActivity : AppCompatActivity() {
     fun showText(view: View) {
         val listRecords = ArrayList<String>()
         val listview = findViewById<ListView>(R.id.simple_list_item_1)
-        allPark?.forEach {
+        allRecords?.forEach {
             val instanceName = it.toString()
             listRecords.add(instanceName)
         }
         val adapter = ArrayAdapter(this, android.R.layout.simple_list_item_1, listRecords)
         listview.adapter = adapter
-        Log.i("Grabado de:::", allPark.toString())
+        Log.i("Grabado de:::", allRecords.toString())
 
     }
 
     fun insertar(view: View) {
         var indice = 0
-        indice = (allPark?.size)?.plus(1)!!
+        indice = (allRecords?.size)?.plus(1)!!
         var aRecord = Record(indice, nombre, ok , fail  )
-        allPark?.add(aRecord)
+        allRecords?.add(aRecord)
 
     }
 
     fun borrar(view: View) {
-        allPark?.clear()
+        allRecords?.clear()
     }
 
     fun verPuntuaciones(view: View) {
@@ -112,7 +112,7 @@ class MainActivity : AppCompatActivity() {
     @OptIn(DelicateCoroutinesApi::class)
     fun replay(view: View) {
         var saveGame: MutableList<Record>?
-        saveGame= allPark as MutableList<Record>
+        saveGame= allRecords as MutableList<Record>
         Log.i("Datos:::", saveGame.toString())
         GlobalScope.launch {
             AppDatabase.getDatabase(applicationContext).recordDao().insertAll(saveGame)
