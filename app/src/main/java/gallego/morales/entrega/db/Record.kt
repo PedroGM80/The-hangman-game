@@ -28,6 +28,4 @@ data class Record(
     override fun toString(): String {
         return " $name , Aciertos $ok, Fallos $fail"
     }
-
-
 }

@@ -40,11 +40,11 @@ class GameViewModel : ViewModel() {
     val texto: LiveData<String>
         get() = _texto
 
-    private fun getEstateProperties() {
+    private fun getRetroFitProperties() {
         viewModelScope.launch {
             try {
                 val listResult = MyObject.retrofitService.getProperties()
-                _status.value = "Success: ${listResult.size} Mars properties retrieved"
+                _status.value = "Success: ${listResult.size} data retrieved"
                 if (listResult.isNotEmpty()) {
                     _property.value = listResult.random()
                     _texto.value = property.value.toString()
@@ -94,7 +94,7 @@ class GameViewModel : ViewModel() {
     private var charsExist = ArrayList<Char>()//list of characters representing attempts
 
     init {
-        getEstateProperties()
+        getRetroFitProperties()
         _lives.value = 0
         _countOk.value = 0
         _live_draw.value = listDraw[0]
